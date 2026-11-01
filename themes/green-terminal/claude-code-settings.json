@@ -1,0 +1,7 @@
+{
+  "theme": "dark-ansi",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/green-statusline.sh"
+  }
+}

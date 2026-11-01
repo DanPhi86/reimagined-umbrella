@@ -1,0 +1,69 @@
+/* ==UserStyle==
+@name         Claude – Green Terminal
+@namespace    reimagined-umbrella
+@version      1.0.0
+@description  Grün-auf-Schwarz Terminal-Look (Phosphor-Monitor) für claude.ai
+@match        https://claude.ai/*
+==/UserStyle== */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap");
+
+:root {
+  --gt-bg: #000000;
+  --gt-panel: #050a05;
+  --gt-fg: #33ff33;
+  --gt-dim: #1f9e1f;
+  --gt-bright: #8cff8c;
+  --gt-border: #1a5c1a;
+  --gt-glow: 0 0 2px rgba(51, 255, 51, 0.65), 0 0 8px rgba(51, 255, 51, 0.25);
+  color-scheme: dark;
+}
+
+html, body, #__next, main, nav, aside, header, footer, div, section, form, dialog {
+  background-color: var(--gt-bg) !important;
+  border-color: var(--gt-border) !important;
+}
+
+*, *::before, *::after {
+  color: var(--gt-fg) !important;
+  font-family: "IBM Plex Mono", "Fira Code", "Courier New", monospace !important;
+  border-color: var(--gt-border) !important;
+  box-shadow: none !important;
+}
+
+body { text-shadow: var(--gt-glow); }
+
+/* Eingabe & Buttons */
+textarea, input, [contenteditable="true"], .ProseMirror,
+button, [role="button"], [role="menu"], [role="dialog"], [role="listbox"] {
+  background-color: var(--gt-panel) !important;
+  caret-color: var(--gt-fg) !important;
+}
+button:hover, [role="button"]:hover, a:hover { color: var(--gt-bright) !important; }
+::placeholder { color: var(--gt-dim) !important; opacity: 1 !important; }
+
+/* Code */
+pre, code, pre *, code * {
+  background-color: var(--gt-panel) !important;
+  color: var(--gt-fg) !important;
+}
+pre { border: 1px solid var(--gt-border) !important; }
+
+/* Icons */
+svg { color: var(--gt-fg) !important; fill: currentColor; }
+svg [stroke]:not([stroke="none"]) { stroke: currentColor !important; }
+
+/* Bilder normal lassen */
+img, video, canvas { filter: none !important; }
+
+/* Auswahl & Scrollbar */
+::selection { background: var(--gt-border) !important; color: var(--gt-bright) !important; }
+* { scrollbar-color: var(--gt-border) var(--gt-bg); }
+
+/* Optionale Scanlines (CRT-Effekt) */
+body::after {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 2147483647;
+  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 2px, rgba(0,0,0,0.18) 2px 3px);
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Green Terminal",
+  "background": "#000000",
+  "foreground": "#33FF33",
+  "black": "#0A0F0A",
+  "red": "#2FBF2F",
+  "green": "#33FF33",
+  "yellow": "#66FF66",
+  "blue": "#22AA22",
+  "magenta": "#44DD44",
+  "cyan": "#55EE55",
+  "white": "#33FF33",
+  "brightBlack": "#1A5C1A",
+  "brightRed": "#5CFF5C",
+  "brightGreen": "#7CFF7C",
+  "brightYellow": "#A6FFA6",
+  "brightBlue": "#3FD43F",
+  "brightMagenta": "#6BFF6B",
+  "brightCyan": "#8CFF8C",
+  "brightWhite": "#C8FFC8",
+  "cursorColor": "#33FF33",
+  "selectionBackground": "#1A5C1A"
+}

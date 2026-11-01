@@ -1,0 +1,26 @@
+{
+  "workbench.colorCustomizations": {
+    "terminal.background": "#000000",
+    "terminal.foreground": "#33FF33",
+    "terminalCursor.foreground": "#33FF33",
+    "terminal.selectionBackground": "#1A5C1A",
+    "terminal.ansiBlack": "#0A0F0A",
+    "terminal.ansiRed": "#2FBF2F",
+    "terminal.ansiGreen": "#33FF33",
+    "terminal.ansiYellow": "#66FF66",
+    "terminal.ansiBlue": "#22AA22",
+    "terminal.ansiMagenta": "#44DD44",
+    "terminal.ansiCyan": "#55EE55",
+    "terminal.ansiWhite": "#33FF33",
+    "terminal.ansiBrightBlack": "#1A5C1A",
+    "terminal.ansiBrightRed": "#5CFF5C",
+    "terminal.ansiBrightGreen": "#7CFF7C",
+    "terminal.ansiBrightYellow": "#A6FFA6",
+    "terminal.ansiBrightBlue": "#3FD43F",
+    "terminal.ansiBrightMagenta": "#6BFF6B",
+    "terminal.ansiBrightCyan": "#8CFF8C",
+    "terminal.ansiBrightWhite": "#C8FFC8"
+  },
+  "terminal.integrated.fontFamily": "'IBM Plex Mono', 'Fira Code', monospace",
+  "terminal.integrated.minimumContrastRatio": 1
+}
