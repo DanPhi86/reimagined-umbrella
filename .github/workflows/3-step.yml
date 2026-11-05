@@ -8,7 +8,7 @@ on:
 concurrency: step-3
 
 permissions:
-  contents: write
+  contents: read
   actions: write
   issues: write
 
@@ -23,13 +23,14 @@ jobs:
   check_step:
     name: Check step
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     outputs:
       is-step-complete: ${{ steps.is-step-complete.outputs.is-step-complete }}
 
     steps:
       - name: Verify comment body includes step number and a checked box
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         id: is-step-complete
         with:
           script: |
@@ -51,6 +52,7 @@ jobs:
     name: Post next step content
     needs: [find_exercise, check_step]
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     if: ${{ needs.check_step.outputs.is-step-complete == 'true' }}
 
     env:
