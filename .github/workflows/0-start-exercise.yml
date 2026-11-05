@@ -26,6 +26,7 @@ jobs:
   post_next_step_content:
     name: Post next step content
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     needs: [start_exercise]
     env:
       ISSUE_NUMBER: ${{ needs.start_exercise.outputs.issue-number }}
